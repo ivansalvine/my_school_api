@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="clientReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="49899485-df06-4297-8260-193b6f33b3dd">
+	<parameter name="title" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="date" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="fullname" class="java.lang.String"/>
+	<field name="secteur" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="160" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="-20" width="597" height="180" uuid="5d7f55ed-b745-4999-bfa2-11f0720bf4d9"/>
+				<imageExpression><![CDATA["C:/Users/steph/Documents/My-crm/entete.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="17" y="7" width="79" height="73" uuid="381bf2bf-9363-431d-9f33-63c8085791cc"/>
+				<imageExpression><![CDATA["C:/Users/steph/Documents/My-crm/logo.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="116" width="550" height="40" backcolor="#961A7F" uuid="b5e141d3-04ea-4f91-9441-d2b57bd50665"/>
+				<textField>
+					<reportElement x="17" y="6" width="513" height="20" forecolor="#FFFFFF" uuid="d9f7c28f-b550-49a3-a2d1-a5cee539f5eb"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField pattern="dd MMMMM, yyyy">
+				<reportElement x="476" y="63" width="100" height="22" uuid="9403ea89-ac37-4703-8716-cff80985faa8"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="421" y="63" width="60" height="22" uuid="7e01e714-b7c3-43b2-9731-c215e93651e6"/>
+				<text><![CDATA[Abidjan le: ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="2" width="71" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="972cc899-62b0-44a7-8879-78da1e92a628"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="71" y="2" width="108" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="0d62e5bf-40e5-46ab-9529-cf900aef2480"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nom du client]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="179" y="2" width="108" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="4e6ebe5b-a9cb-4090-8137-862fc103cff6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Secteur d'activité]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="287" y="2" width="118" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="42abb6f2-b136-4fd5-88c3-2f6b60ee023a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Representant legal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="405" y="2" width="145" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="4ec5900e-957e-4779-ae80-533f419ad644"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="70" height="30" uuid="8cf00428-843a-4397-a970-3d79b7cc9703"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="109" height="30" uuid="5aeda07c-23c9-4bdb-adef-ec594a44f0df"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="0" width="108" height="30" uuid="6dba8c55-5123-4225-914d-3b137acb0781"/>
+				<textFieldExpression><![CDATA[$F{secteur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="287" y="0" width="118" height="30" uuid="d674a33e-48ce-4a27-b885-b78328dd472e"/>
+				<textFieldExpression><![CDATA[$F{fullname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="0" width="145" height="30" uuid="6c012292-a305-440a-a368-5cc9de9ecfd4"/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="38" y="30" width="512" height="15" uuid="60c61375-d2be-4cd5-937f-392695ecfaa9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[RCCM : CI-ABJ-03-2023-B12-01232 01 BP 2691 Abidjan 01 CC : 2300861J Tél : +225 0506634007 / 0709780881]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="46" width="152" height="15" uuid="293cf8d5-c931-46a3-a383-265b3040a844">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail : info.horebservicesci.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-5" y="25" width="560" height="1" forecolor="#951B80" uuid="c27a7e31-8be2-4ff7-a4ef-86112c964500">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="210" y="10" width="180" height="20" uuid="a131ae7d-417c-4a12-a05d-5141ffac94a2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HOREB SERVICES ENERGIES CI]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="devisReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fa710734-aa96-4ab5-bfd8-1b27f6cb2058">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="title" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="date" class="java.lang.String"/>
+	<field name="numeroDevis" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="client" class="java.lang.String"/>
+	<field name="projet" class="java.lang.String"/>
+	<field name="valeur" class="java.lang.String"/>
+	<field name="solde" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="155" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="-20" width="841" height="175" uuid="12c24dc4-8309-4df7-bf88-a30edbac392f"/>
+				<imageExpression><![CDATA["C:/Users/steph/Documents/My-crm/entete.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="675" y="60" width="60" height="22" uuid="91438154-519d-41b8-a08f-abb35099e1c3"/>
+				<text><![CDATA[Abidjan le: ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="17" y="7" width="79" height="73" uuid="3d05cd64-68ea-4f57-a636-5a620f49a1f5"/>
+				<imageExpression><![CDATA["C:/Users/steph/Documents/My-crm/logo.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="dd MMMMM, yyyy">
+				<reportElement x="730" y="60" width="100" height="22" uuid="f8779167-5a5c-48b3-973f-f8944f353808"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement mode="Opaque" x="1" y="106" width="779" height="40" backcolor="#961A7F" uuid="a7c259ed-484d-498a-85e5-d2a2c8980e7a"/>
+				<textField>
+					<reportElement x="18" y="10" width="737" height="20" forecolor="#FFFFFF" uuid="ca7baf45-1cdc-4926-bbb8-07496efdff13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="72" y="0" width="96" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="f1f6bef1-5bc3-45f2-a3dc-96debaded8c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero devis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="440" y="0" width="130" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="a0124830-2766-4bd6-a7bb-c1da278645b1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Projet]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="168" y="0" width="150" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="05dc1cdc-3b42-4d37-980c-f909070faae4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Intitulé devis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="0" width="71" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="d725dcaa-c6e8-4bba-88a8-7912350677fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="318" y="0" width="122" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="c97a1241-25df-494b-b02c-61e13847f17e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Client]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="570" y="0" width="109" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="a7e8697c-9501-479c-9d5f-c8fcf9a6edc1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valeur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="679" y="0" width="101" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="d97df517-7a4d-4911-9c16-85f75df4f19a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Soldé ?]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="71" height="30" uuid="f807c22e-8e1b-4f8c-ba70-d1d7b185bd75"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="0" width="96" height="30" uuid="ba95009f-9f51-48d5-b434-f30d708844c6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{numeroDevis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="0" width="150" height="30" uuid="55e9f3a1-dd08-4bc4-a8b3-d945aea90afe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="0" width="122" height="30" uuid="53166764-9d6a-4e25-b0e5-5695931317f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{client}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="130" height="30" uuid="2817e26d-9e22-4ff8-b6a4-bfa114eb0d76"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{projet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="570" y="0" width="109" height="30" uuid="dc0815fc-7950-41e4-be79-0eddcb9a52ba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{valeur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="679" y="0" width="101" height="30" uuid="5087b04d-9a9e-4144-a4fc-3428a24a462c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{solde}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="143" y="30" width="512" height="15" uuid="7a4f6c9b-bf22-4c57-94bc-0660adcd1a16">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[RCCM : CI-ABJ-03-2023-B12-01232 01 BP 2691 Abidjan 01 CC : 2300861J Tél : +225 0506634007 / 0709780881]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="46" width="152" height="15" uuid="5d0c4d7d-cccc-44f7-9564-9d07070666bc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail : info.horebservicesci.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="100" y="25" width="560" height="1" forecolor="#951B80" uuid="8e71d431-21f3-4bc3-8da5-bc41661963b3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="315" y="10" width="180" height="20" uuid="ed57990d-6a35-4dd9-8632-efd8164f54a3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HOREB SERVICES ENERGIES CI]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

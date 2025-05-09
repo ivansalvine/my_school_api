@@ -1,2 +1,3 @@
-# my_school_api
-Api de gestion d'université
+<h1>Spring Boot</h1>
+<h2>JWT authentication api / Spring Security</h2>
+

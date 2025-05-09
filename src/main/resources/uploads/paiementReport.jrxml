@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="paiementReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e8697d09-2201-41e5-849f-114044951aaf">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="json" class="java.util.List"/>
+	<parameter name="title" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="startDate" class="java.lang.String"/>
+	<field name="endDate" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="id" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="numeroDevis" class="java.lang.String"/>
+	<field name="montant" class="java.lang.Integer"/>
+	<field name="reste" class="java.lang.Integer"/>
+	<field name="description" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="170" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="-20" width="842" height="190" uuid="4d37763f-0607-4908-85f5-7668b1d273c8"/>
+				<imageExpression><![CDATA["C:/Users/steph/Documents/My-crm/entete.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="17" y="7" width="79" height="73" uuid="0d0b701a-04dc-4040-bfbb-38cf5ed62e06"/>
+				<imageExpression><![CDATA["C:/Users/steph/Documents/My-crm/logo.jpg"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="120" width="810" height="40" backcolor="#961A7F" uuid="91bdb0a3-322f-490c-9c96-53fe39f4e88c"/>
+				<textField>
+					<reportElement x="140" y="10" width="523" height="20" forecolor="#FFFFFF" uuid="f84f1666-1071-46b5-86f9-78b5a0446e35"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField pattern="dd MMMMM, yyyy">
+				<reportElement x="691" y="64" width="100" height="22" uuid="0dd94764-9205-47be-b3e1-68a336db4130"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="636" y="64" width="60" height="22" uuid="2ae539ba-fe15-4ed5-b72d-b39d127b6566"/>
+				<text><![CDATA[Abidjan le: ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="2" width="71" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="0b6b0b2d-5cf0-4167-b0c7-269f81f9e688"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="71" y="2" width="191" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="93afbe2a-89ce-4296-aa27-cf5b83884893"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Identifiant paiement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="262" y="2" width="93" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="3a80eecf-0093-400b-9187-a681d0003351"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numero devis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="355" y="2" width="141" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="4b304741-17de-489b-9497-9209c555af1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Intitulé devis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="496" y="2" width="85" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="410095e0-d421-40b4-acdb-95561e89cd98"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Montant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="581" y="2" width="80" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="946c96e6-908a-4662-9256-efee2c8f0ec3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reste]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="661" y="2" width="149" height="29" forecolor="#FFFFFF" backcolor="#BDBDBD" uuid="b34f8e1a-c409-43ff-9374-26c5c8945fb8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="71" height="20" uuid="fefadea8-c36b-4c0e-ae36-f37ce682a259"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="0" width="191" height="20" uuid="c2f35d7e-14eb-43ca-a546-7a93d06762ad"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="262" y="0" width="93" height="20" uuid="d62e27a9-d29c-42fe-ba02-0f69b37776bf"/>
+				<textFieldExpression><![CDATA[$F{numeroDevis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="141" height="20" uuid="3a8e845f-d7fa-4948-95e6-c287a6cb165d"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="496" y="0" width="85" height="20" uuid="fee411cb-2423-472d-85c9-18ba789de91a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{montant}+" FCFA"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="581" y="0" width="80" height="20" uuid="2f4d20dc-9f90-4a6a-9567-afb994e453f6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{reste}+" FCFA"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="661" y="0" width="149" height="20" uuid="27387172-f39d-4c16-b3e5-a825d46b7053"/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="152" y="30" width="512" height="15" uuid="d984cec9-aabe-40e2-8033-6a0dffebfb16">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[RCCM : CI-ABJ-03-2023-B12-01232 01 BP 2691 Abidjan 01 CC : 2300861J Tél : +225 0506634007 / 0709780881]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="46" width="152" height="15" uuid="d19bc5c3-9e22-4d5b-a8c8-7cd2c14a1d28">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[E-mail : info.horebservicesci.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="109" y="25" width="560" height="1" forecolor="#951B80" uuid="e49960a4-3923-40ec-ad74-4231e5deaba1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="324" y="10" width="180" height="20" uuid="88d98af5-cca6-4402-bf0e-ad5af85c3e9c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HOREB SERVICES ENERGIES CI]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="53" splitType="Stretch"/>
+	</summary>
+</jasperReport>
